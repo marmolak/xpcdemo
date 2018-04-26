@@ -8,10 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		509FA8AA2092032700F1D1F4 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 509FA8A92092032700F1D1F4 /* main.c */; };
+		509FA8B72092036500F1D1F4 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 509FA8B62092036500F1D1F4 /* main.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		509FA8BD209204E800F1D1F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 509FA89E2092032700F1D1F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 509FA8B32092036500F1D1F4;
+			remoteInfo = "xpcservicedemo-server";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		509FA8A42092032700F1D1F4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		509FA8B22092036500F1D1F4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,10 +45,21 @@
 /* Begin PBXFileReference section */
 		509FA8A62092032700F1D1F4 /* xpcservicedemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = xpcservicedemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		509FA8A92092032700F1D1F4 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		509FA8B42092036500F1D1F4 /* xpcservicedemo-server */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "xpcservicedemo-server"; sourceTree = BUILT_PRODUCTS_DIR; };
+		509FA8B62092036500F1D1F4 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		509FA8BC2092040F00F1D1F4 /* com.marmolak.xpcservicedemo-server.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.marmolak.xpcservicedemo-server.plist"; sourceTree = "<group>"; };
+		509FA8BF209209E900F1D1F4 /* xpcservicedemo-server.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "xpcservicedemo-server.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		509FA8A32092032700F1D1F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		509FA8B12092036500F1D1F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				509FA8A82092032700F1D1F4 /* xpcservicedemo */,
+				509FA8B52092036500F1D1F4 /* xpcservicedemo-server */,
 				509FA8A72092032700F1D1F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				509FA8A62092032700F1D1F4 /* xpcservicedemo */,
+				509FA8B42092036500F1D1F4 /* xpcservicedemo-server */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +93,24 @@
 				509FA8A92092032700F1D1F4 /* main.c */,
 			);
 			path = xpcservicedemo;
+			sourceTree = "<group>";
+		};
+		509FA8B52092036500F1D1F4 /* xpcservicedemo-server */ = {
+			isa = PBXGroup;
+			children = (
+				509FA8BB209203F200F1D1F4 /* plist */,
+				509FA8B62092036500F1D1F4 /* main.c */,
+				509FA8BF209209E900F1D1F4 /* xpcservicedemo-server.entitlements */,
+			);
+			path = "xpcservicedemo-server";
+			sourceTree = "<group>";
+		};
+		509FA8BB209203F200F1D1F4 /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				509FA8BC2092040F00F1D1F4 /* com.marmolak.xpcservicedemo-server.plist */,
+			);
+			path = plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -76,10 +127,28 @@
 			buildRules = (
 			);
 			dependencies = (
+				509FA8BE209204E800F1D1F4 /* PBXTargetDependency */,
 			);
 			name = xpcservicedemo;
 			productName = xpcservicedemo;
 			productReference = 509FA8A62092032700F1D1F4 /* xpcservicedemo */;
+			productType = "com.apple.product-type.tool";
+		};
+		509FA8B32092036500F1D1F4 /* xpcservicedemo-server */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 509FA8B82092036500F1D1F4 /* Build configuration list for PBXNativeTarget "xpcservicedemo-server" */;
+			buildPhases = (
+				509FA8B02092036500F1D1F4 /* Sources */,
+				509FA8B12092036500F1D1F4 /* Frameworks */,
+				509FA8B22092036500F1D1F4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "xpcservicedemo-server";
+			productName = "xpcservicedemo-server";
+			productReference = 509FA8B42092036500F1D1F4 /* xpcservicedemo-server */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -88,10 +157,16 @@
 		509FA89E2092032700F1D1F4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Robin Hack";
 				TargetAttributes = {
 					509FA8A52092032700F1D1F4 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					509FA8B32092036500F1D1F4 = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -109,6 +184,7 @@
 			projectRoot = "";
 			targets = (
 				509FA8A52092032700F1D1F4 /* xpcservicedemo */,
+				509FA8B32092036500F1D1F4 /* xpcservicedemo-server */,
 			);
 		};
 /* End PBXProject section */
@@ -122,7 +198,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		509FA8B02092036500F1D1F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				509FA8B72092036500F1D1F4 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		509FA8BE209204E800F1D1F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 509FA8B32092036500F1D1F4 /* xpcservicedemo-server */;
+			targetProxy = 509FA8BD209204E800F1D1F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		509FA8AB2092032700F1D1F4 /* Debug */ = {
@@ -230,6 +322,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -245,6 +338,24 @@
 		509FA8AF2092032700F1D1F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		509FA8B92092036500F1D1F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_ENTITLEMENTS[sdk=macosx10.13]" = "xpcservicedemo-server.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		509FA8BA2092036500F1D1F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "xpcservicedemo-server.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -267,6 +378,15 @@
 			buildConfigurations = (
 				509FA8AE2092032700F1D1F4 /* Debug */,
 				509FA8AF2092032700F1D1F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		509FA8B82092036500F1D1F4 /* Build configuration list for PBXNativeTarget "xpcservicedemo-server" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				509FA8B92092036500F1D1F4 /* Debug */,
+				509FA8BA2092036500F1D1F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
